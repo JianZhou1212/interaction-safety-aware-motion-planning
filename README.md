@@ -35,6 +35,27 @@ The computation time of the policy-based approach with p = 0.1 to 0.5 is 0.11 s,
 From this case study, we can conclude that:
 (1) The policy-based approach is generally less conservative than the sequence-based approach, particularly when one of the probabilities is predicted very small. (2) The policy-based approach takes a longer time to solve the problem, and it is easy to infer that the computation time increases when the number of SVs and the number of modes are increased.
 
+## An example to illustrate why it is necessary to reformulate the OCP of the policy-based approach
+
+It is mentioned in Remark 5.2 in the manuscript that the policy-based
+approach necessitates reformulating the OCP at every time step, as the number of optimization variables of the OCP,
+which depend on the prediction of obstacles, is changing. This will be illustrated by an example here.
+
+We consider the case illustrated in Fig. 6. 
+![alt](policy-vs-sequence-optimization/policy.png)
+<center><font size=2> Fig.6 Illustration of the policy-based approach with respect to the predicted modes of SV. </font></center>
+
+In Fig. 6, we assume that the SV has two predicted modes, i.e., mode 1 and mode 2. Correspondingly, the ego vehicle (EV) has two control policies to avoid collision with each mode of the SV. The control sequences of each policy of the EV corresponding to mode 1 and mode 2 of the SV are:
+$$u_{1,k}^{\rm EV} \ u_{1,k+1}^{\rm EV} \ u_{1,k+2}^{\rm EV} \ u_{1,k+3}^{\rm EV} \ u_{1,k+4}^{\rm EV}$$
+and
+$$u_{2,k}^{\rm EV} \ u_{2,k+1}^{\rm EV} \ u_{2,k+2}^{\rm EV} \ u_{2,k+3}^{\rm EV} \ u_{2,k+4}^{\rm EV}$$
+
+These two control sequences should share a common portion before a time point, and then start to deviate. To enhance the safety of the policies, and also to reduce the number of redundant optimization variables, the method in [1] and [2] suggests that when the modes intersect with each other, the control actions of the corresponding policies should be equal. For example, in Fig. 6, the two policies share a control sequence before time step $k+3$ in the prediction horizon, i.e.,
+$$u_{1,k}^{\rm EV}=u_{2,k}^{\rm EV}, \ u_{1,k+1}^{\rm EV}=u_{2,k+1}^{\rm EV}$$
+
+However, due to the uncertainty in the predictions, the exact time step within the prediction horizon at which the modes start to completely separate from each other becomes uncertain. As a result, the number of optimization variables may change, necessitating the reformulation of the OCP. 
+
+
 ## Reference
 [1] Batkovic, Ivo, et al. "A robust scenario MPC approach for uncertain multi-modal obstacles." IEEE Control Systems Letters 5.3 (2021): 947-952.
 
