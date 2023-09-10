@@ -1,12 +1,23 @@
-# Code for Interaction-Aware Motion Planning for Autonomous Vehicles with Multi-Modal Obstacle Uncertainties in Multi-Vehicle Scenarios
+# Interaction-Aware Motion Planning for Autonomous Vehicles with Multi-Modal Obstacle Uncertainty Predictions
 
-(For any questions please contact jian.zhou@liu.se)
+(For any questions please contact jian.zhou@liu.se or zjzb1212@qq.com)
+## Basic information
+> The paper "Interaction-Aware Motion Planning for Autonomous Vehicles with Multi-Modal Obstacle Uncertainty Predictions" by Jian Zhou, Björn Olofsson, and Erik Frisk, has been accepted by IEEE Transactions on Intelligent Vehicles.
 
-The current version contains the implementation for the comparison between **Sequence-based Optimization** and **Policy-based Optimization** [1], [2].
+> The authors come from the Department of Electrical Engineering, Linköping University, Sweden, and Department of Automatic Control, Lund University, Sweden.
 
-The full code of the paper will be published if the paper can be accepted.
+> See **'Implementatation'** the code for the method proposed in the paper. See **'policy-vs-sequence-optimization'** the implementation for the comparison between **Sequence-based Optimization** and **Policy-based Optimization** [1], [2].
 
-## Comparison between Sequence-based and Policy-based Optimizations
+## Prerequisite
+> You need to install CasADi (https://web.casadi.org/) for running both the Python code and MATLAB code. 
+
+> The optimization problem is solved using linear solver ma57 (https://licences.stfc.ac.uk/product/coin-hsl), but you can comment out the ma57 solver in the code of you do not manage to install the HSL solvers. Then the ipopt will use the default linear solver.
+
+> One key Python package is needed: **scikit-image 0.21.0** (https://pypi.org/project/scikit-image/).
+
+The following will show some supplementary materials to the paper. These case studies are mentioned in the corresponding places during the paper.
+
+### Comparison between Sequence-based and Policy-based Optimizations
 The implementation is performed by MATLAB, to run the code you need to download CasADi (https://web.casadi.org/).
 
 
@@ -35,7 +46,7 @@ The computation time of the policy-based approach with p = 0.1 to 0.5 is 0.11 s,
 From this case study, we can conclude that:
 (1) The policy-based approach is generally less conservative than the sequence-based approach, particularly when one of the probabilities is predicted very small. (2) The policy-based approach takes a longer time to solve the problem, and it is easy to infer that the computation time increases when the number of SVs and the number of modes are increased.
 
-## An example to illustrate why it is necessary to reformulate the OCP of the policy-based approach
+### An example to illustrate why it is necessary to reformulate the OCP of the policy-based approach
 
 It is mentioned in Remark 5.2 in the manuscript that the policy-based
 approach necessitates reformulating the OCP at every time step, as the number of optimization variables of the OCP,
