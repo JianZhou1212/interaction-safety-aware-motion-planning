@@ -6,16 +6,16 @@
 
 > The authors come from the Department of Electrical Engineering, Linköping University, Sweden, and Department of Automatic Control, Lund University, Sweden.
 
-> See **'Implementatation'** the code for the method proposed in the paper. See **'policy-vs-sequence-optimization'** the implementation for the comparison between **Sequence-based Optimization** and **Policy-based Optimization** [1], [2].
+> See **'Implementation'** the code for the method proposed in the paper. See **'policy-vs-sequence-optimization'** the implementation for the comparison between **Sequence-based Optimization** and **Policy-based Optimization** [1], [2].
 
 ## Prerequisite
 > You need to install CasADi (https://web.casadi.org/) for running both the Python code and MATLAB code. 
 
-> The optimization problem is solved using linear solver ma57 (https://licences.stfc.ac.uk/product/coin-hsl), but you can comment out the ma57 solver in the code of you do not manage to install the HSL solvers. Then the ipopt will use the default linear solver.
+> The optimization problem is solved using linear solver ma57 (https://licences.stfc.ac.uk/product/coin-hsl), but you can comment out the ma57 solver in the code if you do not manage to install the HSL solvers. Then the ipopt will use the default linear solver.
 
 > One key Python package is needed: **scikit-image 0.21.0** (https://pypi.org/project/scikit-image/).
 
-The following will show some supplementary materials to the paper. These case studies are mentioned in the corresponding places during the paper.
+The following will show some supplementary materials to the paper. These case studies are mentioned in the corresponding places in the paper.
 
 ### Comparison between Sequence-based and Policy-based Optimizations
 The implementation is performed by MATLAB, to run the code you need to download CasADi (https://web.casadi.org/).
