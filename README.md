@@ -4,7 +4,19 @@
 ## Basic information
 > The paper "Interaction-Aware Motion Planning for Autonomous Vehicles with Multi-Modal Obstacle Uncertainty Predictions" by Jian Zhou, Björn Olofsson, and Erik Frisk, has been accepted by IEEE Transactions on Intelligent Vehicles.
 
-> The authors come from the Department of Electrical Engineering, Linköping University, Sweden, and Department of Automatic Control, Lund University, Sweden.
+> The authors come from the Department of Electrical Engineering, Linköping University, Sweden, and Department of Automatic Control, Lund University, Sweden. If you are interested in this research, please consider to cite it at:
+```
+@article{zhou2023interaction,
+  title={Interaction-Aware Motion Planning for Autonomous Vehicles with Multi-Modal Obstacle Uncertainty Predictions},
+  author={Jian Zhou, Bj{\"o}rn and Frisk, Erik},
+  journal={IEEE Transactions on Intelligent Vehicles},
+  year={2023},
+  volume={},
+  number={},
+  pages={},
+  doi={10.1109/TIV.2023.3314709}
+} 
+```
 
 > See **'Implementation'** the code for the method proposed in the paper. See **'policy-vs-sequence-optimization'** the implementation for the comparison between **Sequence-based Optimization** and **Policy-based Optimization** [1], [2].
 
