@@ -8,7 +8,7 @@
 ```
 @article{zhou2023interaction,
   title={Interaction-Aware Motion Planning for Autonomous Vehicles with Multi-Modal Obstacle Uncertainty Predictions},
-  author={Jian Zhou, Bj{\"o}rn and Frisk, Erik},
+  author={Jian Zhou, Bj{\"o}rn Olofsson and Erik Frisk},
   journal={IEEE Transactions on Intelligent Vehicles},
   year={2023},
   volume={},
