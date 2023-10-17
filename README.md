@@ -1,6 +1,6 @@
 # Interaction-Aware Motion Planning for Autonomous Vehicles with Multi-Modal Obstacle Uncertainty Predictions
 
-(For any questions please contact jian.zhou@liu.se or zjzb1212@qq.com)
+(For questions please feel free to contact jian.zhou@liu.se or zjzb1212@qq.com)
 ## Basic information
 > The paper "Interaction-Aware Motion Planning for Autonomous Vehicles with Multi-Modal Obstacle Uncertainty Predictions" by Jian Zhou, Björn Olofsson, and Erik Frisk, has been accepted by IEEE Transactions on Intelligent Vehicles.
 
